@@ -1,0 +1,29 @@
+{{page-title "CreateRecipe"}}
+
+<h1>Create New Recipe</h1>
+
+<form>
+      <div class="form-group">
+            <label for="title">Title</label>
+            <input {{on "input" this.updateTitle}} value="{{this.title}}" type="text" class="" id="title" placeholder="Enter title" />
+      </div>
+
+      <div class="form-group">
+            <label for="description">Description</label>
+            <input {{on "input" this.updateDescription}} value="{{this.description}}" type="text" id="description" placeholder="Enter description" />
+      </div>
+
+      <div class="form-group">
+            <label for="ingredients">Ingredients (comma separated)</label>
+            <input {{on "input" this.updateIngredients}} value="{{this.ingredients}}" type="text" id="ingredients" placeholder="Enter ingredients" />
+      </div>
+
+      <div class="form-group">
+            <label for="instructions">Instructions</label>
+            <textarea {{on "input" this.updateInstructions}} value="{{this.instruction}}" id="instructions" placeholder="Enter instructions"></textarea>
+      </div>
+
+      <div class="text-center">
+            <button {{on "click" this.createRecipe}} type="submit">Create Recipe</button>
+      </div>
+</form>
